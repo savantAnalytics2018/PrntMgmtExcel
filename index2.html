@@ -1,0 +1,693 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        font-size: .875rem;
+      }
+      .feather {
+        width: 16px;
+        height: 16px;
+        vertical-align: text-bottom;
+      }
+      /*
+       * Sidebar
+       */
+       .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100; /* Behind the navbar */
+        padding: 48px 0 0; /* Height of navbar */
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+      }
+      .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        padding-top: .5rem;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+      }
+      @supports ((position: -webkit-sticky) or (position: sticky)) {
+        .sidebar-sticky {
+          position: -webkit-sticky;
+          position: sticky;
+        }
+      }
+      .sidebar .nav-link {
+        font-weight: 500;
+        color: #333;
+      }
+      .sidebar .nav-link .feather {
+        margin-right: 4px;
+        color: #999;
+      }
+      .sidebar .nav-link.active {
+        color: #007bff;
+      }
+      .sidebar .nav-link:hover .feather,
+      .sidebar .nav-link.active .feather {
+        color: inherit;
+      }
+      .sidebar-heading {
+        font-size: .75rem;
+        text-transform: uppercase;
+      }
+      /*
+       * Content
+       */
+       [role="main"] {
+        padding-top: 48px; /* Space for fixed navbar */
+      }
+      /*
+       * Navbar
+       */
+       .navbar-brand {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, .25);
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+      }
+      .navbar .form-control {
+        padding: .75rem 1rem;
+        border-width: 0;
+        border-radius: 0;
+      }
+      .form-control-dark {
+        color: #fff;
+        background-color: rgba(255, 255, 255, .1);
+        border-color: rgba(255, 255, 255, .1);
+      }
+      .form-control-dark:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+      }
+    </style>
+  </head>
+
+  <body> <div id="app">
+    
+    <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand bg-dark  col-sm-3 col-md-2 mr-0" href="#" style="color: Red">Savant Analytics</a>
+      <!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link " href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-dark text-light sidebar">
+          <div class="sidebar-sticky">
+            
+            <ul class="nav flex-column my-3">
+              <li class="nav-item py-1">
+                <span class="nav-link">
+                  
+                  <a class="text-light" href="#" >
+                    <span style="color:#00FFFF "data-feather="home"></span><span style="color:#00FFFF"> Project Overview
+                  </a>
+                  
+                  <span class="text-light float-right" href="#" >
+                    <!--data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."-->
+                    
+                    
+                    
+                    <div class="btn-group dropright">
+                      <div class="dropdown-tog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span data-feather="settings"></span>
+                      </div>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">Project Settings</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                      </div>
+                    </div>
+                    
+                  </span>
+                  
+                </span>
+              </li>
+            </lu>
+            
+            
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span><span style="color:yellow"> Documents</span>
+            </h6>
+            <ul class="nav flex-column">
+              
+              <li class="nav-item">
+                <router-link class="nav-link activ text-light" to="/documents/QA"><span data-feather="file"></span> QA</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link activ text-light" to="/documents/QC"><span data-feather="file"></span> QC</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link activ text-light" to="/documents/Warehouse"><span data-feather="file"></span>Warehouse</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link activ text-light" to="/documents/Technical Services"><span data-feather="file"></span> Technical Services</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link activ text-light" to="/documents/Production"><span data-feather="file"></span> Production</router-link>
+              </li>
+              <!--<li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Customers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  Reports
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>-->
+            </ul>
+
+            
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Other</span>
+              <!--<a class="d-flex align-items-center text-muted" href="#">-->
+              <!--  <span data-feather="plus-circle"></span>-->
+              <!--</a>-->
+            </h6>
+          
+
+            <!--<ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <router-link class="nav-link text-light" to="/admin-logs"><span data-feather="bar-chart-2"></span> Download Log</router-link>
+              </li>--->
+              <li class="nav-item">
+                <router-link class="nav-link text-light" to="/admin-users"><span data-feather="users"></span> User Guide
+              </li>
+            </lu>
+            
+            
+            
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Authentication</span>
+            </h6>
+            
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <!--<router-link class="nav-link text-light" to="/signin"><span data-feather="log-in"></span> Sign-In</router-link>-->
+                <a class="nav-link text-light" href="signin.html"><span data-feather="log-in"></span> Sign-In</a>
+              </li>
+              <!--<li class="nav-item">-->
+              <!--  <router-link class="nav-link text-light" to="/account"><span data-feather="user-check"></span> Account</router-link>-->
+              <!--</li>-->
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-5 my-5">
+          <router-view></router-view>
+        </main>
+        
+      </div>
+    </div>
+  </div> <!--#APP-->
+  
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <!--Vuejs-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.min.js"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+    
+    <!-- Firebase -->
+    <!--<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>-->
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-database.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>-->
+    <!--<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-messaging.js"></script>-->
+    <!--<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>-->
+    
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+    
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-populate@1.17.0/browser/xlsx-populate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+    
+    <!--AUTHENTICATION-------------------------------------------------------->
+    <script>
+      var config = {
+        apiKey: "AIzaSyAry9o4GVyxglmiIR4AiELF73NR4xZfPQw",
+        authDomain: "saif-pdfs.firebaseapp.com",
+        databaseURL: "https://saif-pdfs.firebaseio.com",
+        projectId: "saif-pdfs",
+        storageBucket: "saif-pdfs.appspot.com",
+        messagingSenderId: "15834607829"
+      };
+      firebase.initializeApp(config);
+      
+      // var db = firebase.firestore();
+      var DATABASE = firebase.database();
+      
+      var DOWNLOADS = DATABASE.ref('downloads');
+      var PERMISSIONS = DATABASE.ref('permissions');
+      
+      
+      // console.log(DOWNLOADS)
+      
+      // // FirebaseUI config.
+      // var uiConfig = {
+      //   signInSuccessUrl: 'index.html',
+      //   signInOptions: [
+      //     // Leave the lines as is for the providers you want to offer your users.
+      //     firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      //     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          
+      //     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      //     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      //     firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      //     firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      //     firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+      //   ],
+      //   // tosUrl and privacyPolicyUrl accept either url string or a callback
+      //   // function.
+      //   // Terms of service url/callback.
+      //   tosUrl: '<your-tos-url>',
+      //   // Privacy policy url/callback.
+      //   privacyPolicyUrl: function() {
+      //     window.location.assign('<your-privacy-policy-url>');
+      //   }
+      // };
+      // // Initialize the FirebaseUI Widget using Firebase.
+      // var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // // The start method will wait until the DOM is loaded.
+      // ui.start('#firebaseui-auth-container', uiConfig);
+      
+      var UserEmail;
+      
+      initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            UserEmail = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var uid = user.uid;
+            var phoneNumber = user.phoneNumber;
+            var providerData = user.providerData;
+            
+            // user.getIdToken().then(function(accessToken) {
+            //   // document.getElementById('sign-in-status').textContent = 'Signed in';
+            //   // document.getElementById('sign-in').textContent = 'Sign out';
+            //   console.log(JSON.stringify({
+            //       displayName: displayName,
+            //       email: email,
+            //       emailVerified: emailVerified,
+            //       phoneNumber: phoneNumber,
+            //       photoURL: photoURL,
+            //       uid: uid,
+            //       accessToken: accessToken,
+            //       providerData: providerData
+            //     }, null, '  ')
+            //   )
+            // });
+          } else {
+            // User is signed out.
+            // document.getElementById('sign-in-status').textContent = 'Signed out';
+            // document.getElementById('sign-in').textContent = 'Sign in';
+            // document.getElementById('account-details').textContent = 'null';
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+    </script>
+    
+    <!-- VUE JS ------------------------------------------------------------>
+    <script>
+      
+      const componentDocs = {
+        template: `
+          <div> <h2>Documents</h2>
+            
+            <div class="table-responsive">
+              <table class="table table-striped ">
+                <thead>
+                  <tr>
+                    <!--th>#</th-->
+                    <th>Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(v,i) in myDocsFiltered">
+                    <!--td>{{i}}</td-->
+                    <td><a class="doc" :href="v">{{v}}</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>`,
+      	data() { return { 
+          myDocs: [
+            'docs/QC/measles.pdf'
+            ,'docs/QC/rubella.pdf'
+            ,'docs/QC/smallpox.pdf'
+            ,'docs/QA/test1.xlsx'
+            ,'docs/QA/AcetonForm.xlsx'
+            ,'docs/QC/example1.pdf'
+            // ,'https://firebasestorage.googleapis.com/v0/b/saif-pdfs.appspot.com/o/example1.pdf?alt=media&token=0f9bd0bd-78c0-4a70-b078-11a1aef3edd7'
+            // ,'https://firebasestorage.googleapis.com/v0/b/saif-pdfs.appspot.com/o/P%C5%99%C3%ADloha%20%C4%8D%202%20Formul%C3%A1%C5%99%20Troxerutin_R_INS_HPLC_verze_2_636791827515652480.pdf?alt=media&token=f796a8dd-a983-4dc5-a6eb-b351bc7ef11b'
+            // ,'example4.pdf'
+          ],
+        }},
+        computed: {
+          myDocsFiltered: function () {
+            var folder = this.$route.params.folder;
+            // console.log('folder',folder);
+            return this.myDocs.filter(d => d.indexOf(folder)>-1 ) 
+          },
+        },
+      	mounted: function(){
+      	 // var fontColor = ;
+      	  
+      	  
+      	  /// PDF-LIB -------------------------------------------
+          var PDFDocumentFactory = PDFLib.PDFDocumentFactory;
+          var PDFDocumentWriter = PDFLib.PDFDocumentWriter;
+          var drawText = PDFLib.drawText;
+          
+          // ADD TPDF TIMESTAMP
+          $(document).ready(function(){
+            $("a.doc").click(function(event){
+              event.preventDefault();
+              // console.log(event.target.href);
+              console.log("user clicked doc link");
+              fileName = event.target.href; // e.g. fileName = 'docs/example1.pdf';
+              
+              if(fileName.indexOf('.pdf')>-1){
+                console.log('its a pdf');
+                fetch(fileName).then(
+                  function(response) {
+                    response.arrayBuffer().then(function(buffer) {
+                      // console.log(buffer)
+                      // console.log(buffer[""[[Uint8Array]]""])
+                      const existingPdfDocBytes = new Uint8Array(buffer)
+                      const pdfDoc = PDFDocumentFactory.load(existingPdfDocBytes);
+                      const [helveticaFont] = pdfDoc.embedStandardFont('Helvetica');
+                      
+                      const pages = pdfDoc.getPages();
+                      const page  = pages[0];
+                      
+                      page.addFontDictionary('Helvetica', helveticaFont);
+                      
+                      const contentStream = pdfDoc.createContentStream(
+                        drawText( 'form1 : ' + (new Date()).toISOString().slice(0, 19) , {
+                          x: 200,
+                          y: 800,
+                          size: 16,
+                          font: 'Helvetica',
+                          colorRgb: [0.95, 0.26, 0.21],
+                        })//,
+                      );
+                      
+                      page.addContentStreams(pdfDoc.register(contentStream));
+                      const pdfBytes = PDFDocumentWriter.saveToBytes(pdfDoc);
+                      
+                      // LOG that in firebase
+                      DOWNLOADS.push({user: UserEmail, time: (new Date()).toISOString().slice(0, 19).replace('T', ' '), doc: 'docs/'+fileName.split('docs/')[1]})
+                      
+                      // console.log(pdfBytes)
+                      download( pdfBytes, fileName.split('/').pop(), "text/plain" );
+  
+                    });
+                  }
+                ).catch(function(err) {
+                  console.log('Fetch Error :-S', err);
+                });
+              } else if(fileName.indexOf('.xlsx')){   // xlsx-populate -----------------------------------------
+                console.log('its an EXCEL');
+                
+                // Promise is not defined in IE so xlsx-populate uses a polyfill via JSZip.
+                var Promise = XlsxPopulate.Promise;
+                var radioBlank = document.getElementById("radio-blank");
+                var radioAjax = document.getElementById("radio-ajax");
+                var radioLocal = document.getElementById("radio-local");
+                var urlInput = document.getElementById("url-input");
+                var fileInput = document.getElementById("file-input");
+                function getWorkbook() {
+                    // if (radioBlank.checked) {
+                    //     return XlsxPopulate.fromBlankAsync();
+                    // } else if (radioAjax.checked) {
+                        return new Promise(function (resolve, reject) {
+                            var req = new XMLHttpRequest();
+                            // var url = urlInput.value;
+                            var url = fileName;
+                            req.open("GET", url, true);
+                            req.responseType = "arraybuffer";
+                            req.onreadystatechange = function () {
+                                if (req.readyState === 4){
+                                    if (req.status === 200) {
+                                        resolve(XlsxPopulate.fromDataAsync(req.response));
+                                    } else {
+                                        reject("Received a " + req.status + " HTTP code.");
+                                    }
+                                }
+                            };
+                            req.send();
+                        });
+                    // } else if (radioLocal.checked) {
+                    //     var file = fileInput.files[0];
+                    //     if (!file) return Promise.reject("You must select a file.");
+                    //     return XlsxPopulate.fromDataAsync(file);
+                    // }
+                }
+                function generate(type) {
+                    return getWorkbook()
+                        .then(function (workbook) {
+                            // workbook.sheet(0).cell("A1").value("This was created in the browser!").style("fontColor", "ff0000");
+                            workbook._sheetsNode.children.forEach(function (sheet) {
+                                //workbook.sheet(sheet.attributes.name).column("Z").width(100)
+                                workbook.sheet(sheet.attributes.name).cell("A1").value(sheet.attributes.name + " " + new Date())
+                                  .style({
+                                    fontColor: 'FF0000',
+                                    fontSize: 16,
+                                    numberFormat: "dddd, mmmm dd, yyyy"
+                                  })
+                            });
+                            return workbook.outputAsync({ type: type });
+                            
+                        });
+                }
+                function generateBlob() {
+                    return generate()
+                        .then(function (blob) {
+                            if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+                                window.navigator.msSaveOrOpenBlob(blob, "out.xlsx");
+                            } else {
+                                var url = window.URL.createObjectURL(blob);
+                                var a = document.createElement("a");
+                                document.body.appendChild(a);
+                                a.href = url;
+                                a.download = fileName.split('/').pop();
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            }
+                        })
+                        .catch(function (err) {
+                            alert(err.message || err);
+                            throw err;
+                        });
+                }
+                generateBlob();
+                
+                
+              }
+            });
+          });
+          
+      	}
+      };
+      
+      const componentAdminUsers = {
+        template: `<div>
+            <h2>Users</h2>
+            <div class="table-responsive">
+              <table class="table table-striped ">
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>Permissions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr> <td></td> <td></td> </tr>
+                  <tr> <td></td> <td></td> </tr>
+                  <tr> <td></td> <td></td> </tr>
+                  <tr> <td></td> <td></td> </tr>
+                  <tr> <td></td> <td></td> </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>`,
+      };
+      
+      const componentAdminLogs = {
+        template: `<div> 
+            <h2>Download Logs</h2>
+            <div class="table-responsive">
+              <table class="table table-striped ">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Filename</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr v-for="(v,i) in downloads">
+                    <td>{{v.time}}</td>
+                    <td>{{v.user}}</td>
+                    <td>{{v.doc}}</td>
+                    <td><button class="btn btn-sm btn-danger" @click="deleteLog">Delete</button></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>`,
+      	  data() { return { 
+      	   // title: 'ggggggggggg' ,
+      	    downloads: [],
+      	  } },
+          mounted: function () { // https://firebase.google.com/docs/database/web/read-and-write?authuser=0
+            var that=this;
+            console.log('componentAdminLogs mounted');
+            
+            /// LOAD DL LOGS INTO ARRAY -------------------------------
+            // (this is database, not firestore)
+            DOWNLOADS.once('value').then(function(snapshot) {
+              // console.log('snapshot.val()', snapshot.val());
+              Object.keys(snapshot.val()).forEach(function(d,i){
+                var val = snapshot.val()[d];
+                val.id = d;
+                // console.log(val);
+                that.downloads.push(val);
+              })
+            });
+            // -------------------------------
+          },
+          methods: {
+            deleteLog: function () {
+              console.log('deleteLog')
+            }
+          }
+      };
+      
+      const componentAccount = {
+        template: `<div> 
+            <h2>Account</h2>
+            <div id="sign-in-status"></div>
+            <div id="sign-in"></div>
+            <div id="account-details"></div>
+          </div>`,
+      };
+      const componentSignin = {
+        template: `
+          <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+              <div id="firebaseui-auth-container"></div>  
+            </div>
+          </div>`,
+      };
+      
+      
+      const routes = [
+        // { path: '/foo', component: Foo },
+        // { path: '/bar', component: Bar },
+        { path: '/documents/:folder', alias: 'docs', component: componentDocs },
+        { path: '/admin-logs', alias: 'logs', component: componentAdminLogs },
+        { path: '/admin-users', alias: 'users', component: componentAdminUsers },
+        { path: '/signin', alias: 'signup', component: componentSignin },
+        { path: '/account', alias: 'a', component: componentAccount },
+      ]
+      
+      const router = new VueRouter({
+        routes // short for `routes: routes`
+      })
+      
+      var app = new Vue({
+        router,
+        data: {
+        }
+      }).$mount('#app')
+      
+      // var app = new Vue({
+      //   el: '#app',
+      // })
+    </script>
+    
+    
+    
+    
+    
+    
+
+  </body>
+</html>
